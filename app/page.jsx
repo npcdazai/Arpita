@@ -27,6 +27,8 @@ export default function Home() {
 
   return (
     <>
+
+    
       <Splash />
       <Blobs />
       <Hearts />
