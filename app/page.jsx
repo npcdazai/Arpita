@@ -11,7 +11,6 @@ import ForYou from "@/components/ForYou";
 import Gallery from "@/components/Gallery";
 import Birthday from "@/components/Birthday";
 import Cycle from "@/components/Cycle";
-import Health from "@/components/Health";
 import Diary from "@/components/Diary";
 
 const TABS = [
@@ -19,7 +18,6 @@ const TABS = [
   { id: "gallery", label: "🖼️ Gallery", el: <Gallery /> },
   { id: "birthday", label: "🎂 Birthday", el: <Birthday /> },
   { id: "cycle", label: "🌸 Cycle", el: <Cycle /> },
-  { id: "health", label: "💊 Health", el: <Health /> },
   { id: "diary", label: "📔 Daily Updates", el: <Diary /> },
 ];
 
