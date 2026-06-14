@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --pink: #ff8fb1;
+  --pink-deep: #e75a86;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background:
+    radial-gradient(circle at 10% 10%, #ffe3ee 0, transparent 40%),
+    radial-gradient(circle at 90% 20%, #efe6ff 0, transparent 35%),
+    linear-gradient(160deg, #fff6f9, #fdeef6);
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: #5a3b48;
+}
+
+/* cute scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffc2d6;
+  border-radius: 10px;
+}
+
+/* dreamy animated background blobs */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.55;
+  will-change: transform;
+}
+.blob-1 {
+  width: 420px;
+  height: 420px;
+  background: #ffb3d1;
+  top: -80px;
+  left: -60px;
+  animation: drift1 18s ease-in-out infinite;
+}
+.blob-2 {
+  width: 360px;
+  height: 360px;
+  background: #c9b6ff;
+  bottom: -100px;
+  right: -60px;
+  animation: drift2 22s ease-in-out infinite;
+}
+.blob-3 {
+  width: 320px;
+  height: 320px;
+  background: #a8ecd4;
+  top: 40%;
+  left: 55%;
+  animation: drift3 26s ease-in-out infinite;
+}
+@keyframes drift1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(60px, 80px) scale(1.15); }
+}
+@keyframes drift2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-70px, -50px) scale(1.1); }
+}
+@keyframes drift3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-50px, 60px) scale(1.2); }
+}
+
+@layer components {
+  .card {
+    @apply rounded-3xl p-6 shadow-cute mb-5 border border-white/60;
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  .field {
+    @apply w-full px-4 py-3 rounded-2xl text-[0.95rem] bg-[#fffafc] text-ink outline-none border-2 border-pink-soft focus:border-pink transition;
+  }
+  .lbl {
+    @apply block text-[0.8rem] font-semibold text-[#a06a7e] mb-1 mt-3;
+  }
+  .btn {
+    @apply inline-flex items-center gap-2 bg-pink text-white font-semibold px-5 py-3 rounded-full shadow-cute hover:bg-pink-deep transition active:scale-95;
+  }
+  .badge {
+    @apply inline-block bg-pink-soft text-pink-deep text-[0.72rem] font-bold px-2.5 py-0.5 rounded-full;
+  }
+  .stat {
+    @apply bg-gradient-to-b from-white to-[#fff2f7] rounded-2xl p-4 text-center shadow-cute;
+  }
+}
+
+/* lightbox tweaks */
+.yarl__container {
+  background: rgba(60, 25, 40, 0.92) !important;
+  backdrop-filter: blur(8px);
+}
+.yarl__slide_image {
+  border-radius: 18px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55), 0 0 60px rgba(255, 143, 177, 0.45);
+}
