@@ -40,11 +40,8 @@ export default function ForYou() {
     setComp((c) => (c + 1) % COMPLIMENTS.length);
   }
   function pump() {
-    const v = Math.min(love + 12 + Math.floor(Math.random() * 18), 100);
-    setLove(v);
-    if (v >= 100) {
-      confetti({ particleCount: 120, spread: 80, origin: { y: 0.6 }, colors: ["#ff8fb1", "#e75a86", "#b79cff"] });
-    }
+    setLove(100);
+    confetti({ particleCount: 140, spread: 90, origin: { y: 0.6 }, colors: ["#ff8fb1", "#e75a86", "#b79cff"] });
   }
 
   return (
