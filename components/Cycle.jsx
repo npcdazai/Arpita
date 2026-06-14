@@ -200,7 +200,10 @@ export default function Cycle() {
         </>
       ) : null}
 
-      <h3 className="text-lav font-semibold mt-5 mb-1">History</h3>
+      <div className="flex items-center justify-between mt-5 mb-1">
+        <h3 className="text-lav font-semibold">History</h3>
+        <span className="text-[0.72rem] text-[#b58aa0] flex items-center gap-1">🔒 Saved on this device</span>
+      </div>
       {sorted.length === 0 ? (
         <p className="text-[#c99] italic text-center py-3">No entries yet 🌷</p>
       ) : (

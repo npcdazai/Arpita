@@ -120,14 +120,36 @@ export default function ForYou() {
           transition={{ type: "spring", stiffness: 220, damping: 12 }}
           className="w-24 h-24 object-contain mx-auto mb-2 drop-shadow"
         />
-        <div className="h-7 rounded-full bg-pink-soft overflow-hidden shadow-inner">
+        <div
+          className={`relative h-7 rounded-full bg-pink-soft shadow-inner ${
+            love >= 100 ? "overflow-visible" : "overflow-hidden"
+          }`}
+        >
           <motion.div
-            className="h-full bg-gradient-to-r from-pink to-pink-deep flex items-center justify-end pr-3 text-white text-xs font-bold"
-            animate={{ width: `${love}%` }}
-            transition={{ type: "spring", stiffness: 120, damping: 14 }}
+            className="h-full rounded-full bg-gradient-to-r from-pink to-pink-deep flex items-center justify-end pr-3 text-white text-xs font-bold"
+            animate={
+              love >= 100
+                ? { width: "125%", scaleX: [1, 1.08, 1], boxShadow: "0 0 26px rgba(231,90,134,.75)" }
+                : { width: `${love}%` }
+            }
+            transition={
+              love >= 100
+                ? { width: { type: "spring", stiffness: 140, damping: 9 }, scaleX: { repeat: Infinity, duration: 1.4 } }
+                : { type: "spring", stiffness: 120, damping: 14 }
+            }
           >
-            {love > 8 && `${love}%`}
+            {love > 8 && (love >= 100 ? "∞%" : `${love}%`)}
           </motion.div>
+          {love >= 100 && (
+            <motion.span
+              className="absolute -right-3 -top-8 text-3xl"
+              initial={{ scale: 0, rotate: -20 }}
+              animate={{ scale: 1, rotate: [0, 14, -14, 0], y: [0, -4, 0] }}
+              transition={{ rotate: { repeat: Infinity, duration: 1.6 }, y: { repeat: Infinity, duration: 1.6 } }}
+            >
+              💖
+            </motion.span>
+          )}
         </div>
         <button onClick={pump} className="btn mt-4">
           {love >= 100 ? "🥰 it's overflowing!" : "💗 measure it"}
