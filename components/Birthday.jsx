@@ -63,6 +63,14 @@ export default function Birthday() {
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
     >
+      <motion.img
+        src="/kuromiFaces/kuromi-shy.png"
+        alt="Kuromi"
+        animate={{ y: [0, -14, 0], rotate: [-3, 3, -3] }}
+        transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+        className={`mx-auto object-contain drop-shadow-lg ${isToday ? "w-48 h-48" : "w-28 h-28"}`}
+      />
+
       <h2 className="text-pink-deep text-2xl font-cute mb-1">🎉 Birthday Countdown</h2>
       <p className="text-[#a06a7e]">
         Arpita&apos;s Birthday — <b>27 July</b> 🎂

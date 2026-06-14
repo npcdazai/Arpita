@@ -22,14 +22,18 @@ export default function Splash() {
           exit={{ opacity: 0, scale: 1.1 }}
           transition={{ duration: 0.7 }}
         >
-          <motion.div
+          <motion.img
+            src="/kuromiFaces/kuromi-shy.png"
+            alt="Kuromi"
             initial={{ scale: 0, rotate: -30 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ type: "spring", stiffness: 200, damping: 12 }}
-            className="text-7xl"
-          >
-            💖
-          </motion.div>
+            animate={{ scale: 1, rotate: 0, y: [0, -12, 0] }}
+            transition={{
+              scale: { type: "spring", stiffness: 200, damping: 12 },
+              rotate: { type: "spring", stiffness: 200, damping: 12 },
+              y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+            }}
+            className="w-40 h-40 object-contain drop-shadow-xl"
+          />
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

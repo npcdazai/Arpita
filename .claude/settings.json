@@ -9,11 +9,11 @@
       "Bash(pkill -f \"next dev\")",
       "Bash(pkill -f \"next-server\")",
       "Bash(curl -s http://localhost:3000)",
-      "Bash(git init *)",
-      "Bash(git add *)",
-      "Bash(git commit *)",
-      "Bash(git branch *)",
-      "Bash(git remote *)"
+      "Bash(cp \"[CITYPNG.COM]Angry Kuromi Sanrio Character Transparent PNG - 800x800.png\" kuromi-angry.png)",
+      "Bash(cp \"[CITYPNG.COM]Shy Kuromi with Floating Colorful Hearts HD Transparent PNG - 2000x2000.png\" kuromi-shy.png)",
+      "Bash(curl -s -o /dev/null -w \"page HTTP: %{http_code}\\\\n\" http://localhost:3000)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:3000/kuromiFaces/kuromi-shy.png\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:3000/kuromiFaces/kuromi-angry.png\")"
     ],
     "additionalDirectories": [
       "/Users/abcom/Documents/Arpita/images"

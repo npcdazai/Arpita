@@ -111,6 +111,15 @@ export default function ForYou() {
       <div className="card text-center">
         <h3 className="text-lav font-semibold mb-1">How much do I like you?</h3>
         <p className="text-[#a06a7e] mb-3">Press the button and find out 😏</p>
+        <motion.img
+          key={love >= 100 ? "shy" : "angry"}
+          src={love >= 100 ? "/kuromiFaces/kuromi-shy.png" : "/kuromiFaces/kuromi-angry.png"}
+          alt="Kuromi"
+          initial={{ scale: 0.6, opacity: 0, rotate: -10 }}
+          animate={{ scale: 1, opacity: 1, rotate: 0 }}
+          transition={{ type: "spring", stiffness: 220, damping: 12 }}
+          className="w-24 h-24 object-contain mx-auto mb-2 drop-shadow"
+        />
         <div className="h-7 rounded-full bg-pink-soft overflow-hidden shadow-inner">
           <motion.div
             className="h-full bg-gradient-to-r from-pink to-pink-deep flex items-center justify-end pr-3 text-white text-xs font-bold"

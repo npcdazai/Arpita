@@ -6,6 +6,7 @@ import Hearts from "@/components/Hearts";
 import Blobs from "@/components/Blobs";
 import Sparkles from "@/components/Sparkles";
 import Splash from "@/components/Splash";
+import KuromiBuddy from "@/components/KuromiBuddy";
 import ForYou from "@/components/ForYou";
 import Gallery from "@/components/Gallery";
 import Birthday from "@/components/Birthday";
@@ -32,6 +33,7 @@ export default function Home() {
       <Blobs />
       <Hearts />
       <Sparkles />
+      <KuromiBuddy />
 
       <header className="text-center pt-14 pb-6 px-5 relative z-10">
         <motion.h1
