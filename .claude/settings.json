@@ -13,7 +13,8 @@
       "Bash(cp \"[CITYPNG.COM]Shy Kuromi with Floating Colorful Hearts HD Transparent PNG - 2000x2000.png\" kuromi-shy.png)",
       "Bash(curl -s -o /dev/null -w \"page HTTP: %{http_code}\\\\n\" http://localhost:3000)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:3000/kuromiFaces/kuromi-shy.png\")",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:3000/kuromiFaces/kuromi-angry.png\")"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:3000/kuromiFaces/kuromi-angry.png\")",
+      "Bash(pkill -9 node)"
     ],
     "additionalDirectories": [
       "/Users/abcom/Documents/Arpita/images"

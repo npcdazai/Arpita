@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>For Arpita 🌸</title>
+<title>For Leisha 🌸</title>
 <style>
   :root{
     --pink:#ff8fb1;
@@ -152,7 +152,7 @@
 <canvas id="confetti"></canvas>
 
 <header>
-  <h1>Hello, Arpita 🌷</h1>
+  <h1>Hello, Leisha 🌷</h1>
   <p>A little corner of the internet made just for you 💕</p>
 </header>
 
@@ -178,7 +178,7 @@
   <section class="panel" id="birthday">
     <div class="card" style="text-align:center">
       <h2>🎉 Birthday Countdown</h2>
-      <p style="color:#a06a7e">Arpita's Birthday — <b>27 July</b> 🎂</p>
+      <p style="color:#a06a7e">Leisha's Birthday — <b>7 April</b> 🎂</p>
       <div class="countdown" id="countdown"></div>
       <p class="note" id="bdayMsg"></p>
       <div class="row" style="max-width:420px;margin:14px auto 0;text-align:left">
@@ -329,12 +329,12 @@ document.querySelectorAll('nav button').forEach(b=>{
 });
 
 /* ---------- gallery ---------- */
-const photos=['photo1.jpeg','photo2.jpeg','photo3.jpeg','photo4.jpeg','photo5.jpeg','photo6.jpeg'];
+const photos=['photo1.jpeg','photo2.jpeg','photo3.jpeg','photo4.jpeg','photo5.jpeg','photo6.jpeg','photo7.jpeg','photo8.jpeg','photo9.jpeg'];
 const grid=document.getElementById('galleryGrid');
 photos.forEach((p,idx)=>{
   const f=document.createElement('figure');
   const img=document.createElement('img');
-  img.src='images/'+p; img.loading='lazy'; img.alt='Arpita';
+  img.src='images/'+p; img.loading='lazy'; img.alt='Leisha';
   img.onclick=()=>openLb(idx);
   f.appendChild(img); grid.appendChild(f);
 });
@@ -365,13 +365,13 @@ const today=()=>new Date().toISOString().slice(0,10);
 const dayKey=d=>{const x=new Date(d);x.setHours(0,0,0,0);return x.getTime();};
 function esc(s){return (s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
 
-/* ---------- birthday countdown (27 July) ---------- */
+/* ---------- birthday countdown (7 April) ---------- */
 function updateCountdown(){
   const now=new Date();
   let year=now.getFullYear();
-  let bday=new Date(year,6,27);
-  const today27 = now.getDate()===27 && now.getMonth()===6;
-  if(now>bday && !today27) bday=new Date(year+1,6,27);
+  let bday=new Date(year,3,7);
+  const today27 = now.getDate()===7 && now.getMonth()===3;
+  if(now>bday && !today27) bday=new Date(year+1,3,7);
   const diff=bday-now;
   const days=Math.floor(diff/86400000);
   const hrs=Math.floor(diff/3600000)%24;
@@ -382,7 +382,7 @@ function updateCountdown(){
   const turning = by ? `, turning ${ (today27?now.getFullYear():bday.getFullYear()) - (+by) }` : '';
   if(today27){
     cd.innerHTML='<div class="cd-box" style="min-width:auto"><b>🎂🎉</b></div>';
-    document.getElementById('bdayMsg').textContent=`Happy Birthday Arpita${turning}!! 🥳💕 Hope your day is as wonderful as you are.`;
+    document.getElementById('bdayMsg').textContent=`Happy Birthday Leisha${turning}!! 🥳💕 Hope your day is as wonderful as you are.`;
     return;
   }
   cd.innerHTML=box(days,'Days')+box(hrs,'Hours')+box(mins,'Mins')+box(secs,'Secs');
@@ -394,7 +394,7 @@ function saveBirthYear(){
   if(v) localStorage.setItem('birthYear',v);
   updateCountdown();
 }
-(function(){const by=localStorage.getItem('birthYear');if(by)document.getElementById('birthYear').value=by;})();
+(function(){const by=localStorage.getItem('birthYear')||'2008';document.getElementById('birthYear').value=by;})();
 updateCountdown();setInterval(updateCountdown,1000);
 
 /* ---------- confetti ---------- */

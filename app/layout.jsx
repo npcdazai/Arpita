@@ -15,7 +15,7 @@ const quicksand = Quicksand({
 });
 
 export const metadata = {
-  title: "For Arpita 🌸",
+  title: "For Leisha 🌸",
   description: "A little corner of the internet made just for you 💕",
 };
 

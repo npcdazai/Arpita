@@ -5,7 +5,7 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
 const captions = ["pretty 🌸", "my favourite 💗", "stunning ✨", "adorable 🥰", "gorgeous 🌷", "perfect 💕"];
-const photos = [1, 2, 3, 4, 5, 6].map((n, i) => ({
+const photos = [1, 2, 3, 4, 5, 6, 7, 8, 9].map((n, i) => ({
   src: `/images/photo${n}.jpeg`,
   caption: captions[i % captions.length],
 }));
@@ -31,7 +31,7 @@ export default function Gallery() {
             onClick={() => setIndex(i)}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={p.src} alt="Arpita" loading="lazy" className="w-full h-[200px] object-cover block rounded-sm" />
+            <img src={p.src} alt="Leisha" loading="lazy" className="w-full h-[200px] object-cover block rounded-sm" />
             <figcaption className="absolute bottom-2 left-0 right-0 text-center font-cute text-pink-deep text-sm">
               {p.caption}
             </figcaption>
