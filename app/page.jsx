@@ -42,7 +42,7 @@ export default function Home() {
           transition={{ delay: 0.2, type: "spring" }}
           className="font-cute text-pink-deep text-5xl sm:text-6xl drop-shadow-[0_2px_0_#fff]"
         >
-          Hello, Leisha 🌷
+          Hello, Sherya 🌷
         </motion.h1>
         <div className="mt-4 text-[#a06a7e] text-lg min-h-[28px]">
           <TypeAnimation

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>For Leisha 🌸</title>
+<title>For Sherya 🌸</title>
 <style>
   :root{
     --pink:#ff8fb1;
@@ -152,7 +152,7 @@
 <canvas id="confetti"></canvas>
 
 <header>
-  <h1>Hello, Leisha 🌷</h1>
+  <h1>Hello, Sherya 🌷</h1>
   <p>A little corner of the internet made just for you 💕</p>
 </header>
 
@@ -178,7 +178,7 @@
   <section class="panel" id="birthday">
     <div class="card" style="text-align:center">
       <h2>🎉 Birthday Countdown</h2>
-      <p style="color:#a06a7e">Leisha's Birthday — <b>7 April</b> 🎂</p>
+      <p style="color:#a06a7e">Sherya's Birthday — <b>7 April</b> 🎂</p>
       <div class="countdown" id="countdown"></div>
       <p class="note" id="bdayMsg"></p>
       <div class="row" style="max-width:420px;margin:14px auto 0;text-align:left">
@@ -334,7 +334,7 @@ const grid=document.getElementById('galleryGrid');
 photos.forEach((p,idx)=>{
   const f=document.createElement('figure');
   const img=document.createElement('img');
-  img.src='images/'+p; img.loading='lazy'; img.alt='Leisha';
+  img.src='images/'+p; img.loading='lazy'; img.alt='Sherya';
   img.onclick=()=>openLb(idx);
   f.appendChild(img); grid.appendChild(f);
 });
@@ -382,7 +382,7 @@ function updateCountdown(){
   const turning = by ? `, turning ${ (today27?now.getFullYear():bday.getFullYear()) - (+by) }` : '';
   if(today27){
     cd.innerHTML='<div class="cd-box" style="min-width:auto"><b>🎂🎉</b></div>';
-    document.getElementById('bdayMsg').textContent=`Happy Birthday Leisha${turning}!! 🥳💕 Hope your day is as wonderful as you are.`;
+    document.getElementById('bdayMsg').textContent=`Happy Birthday Sherya${turning}!! 🥳💕 Hope your day is as wonderful as you are.`;
     return;
   }
   cd.innerHTML=box(days,'Days')+box(hrs,'Hours')+box(mins,'Mins')+box(secs,'Secs');

@@ -40,7 +40,7 @@ export default function Splash() {
             transition={{ delay: 0.5 }}
             className="font-cute text-pink-deep text-4xl mt-5"
           >
-            For Leisha
+            For Sherya
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}

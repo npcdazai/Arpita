@@ -26,14 +26,14 @@ function fireConfetti() {
 }
 
 export default function Birthday() {
-  const [year, setYear] = useStored("birthYear", "2008");
+  const [year, setYear] = useStored("birthYear", "2003");
   const [t, setT] = useState(diffTo(nextBday()));
 
   function nextBday() {
     const now = new Date();
-    const isToday = now.getDate() === 7 && now.getMonth() === 3;
-    let b = new Date(now.getFullYear(), 3, 7);
-    if (now > b && !isToday) b = new Date(now.getFullYear() + 1, 3, 7);
+    const isToday = now.getDate() === 30 && now.getMonth() === 2;
+    let b = new Date(now.getFullYear(), 2, 30);
+    if (now > b && !isToday) b = new Date(now.getFullYear() + 1, 2, 30);
     return b;
   }
 
@@ -43,7 +43,7 @@ export default function Birthday() {
   }, []);
 
   const now = new Date();
-  const isToday = now.getDate() === 7 && now.getMonth() === 3;
+  const isToday = now.getDate() === 30 && now.getMonth() === 2;
   const turning = year ? `, turning ${(isToday ? now.getFullYear() : nextBday().getFullYear()) - +year}` : "";
 
   useEffect(() => {
@@ -73,12 +73,12 @@ export default function Birthday() {
 
       <h2 className="text-pink-deep text-2xl font-cute mb-1">🎉 Birthday Countdown</h2>
       <p className="text-[#a06a7e]">
-        Leisha&apos;s Birthday — <b>7 April</b> 🎂
+        Sherya&apos;s Birthday — <b>30 March</b> 🎂
       </p>
 
       {isToday ? (
         <p className="text-pink-deep font-semibold text-lg mt-4">
-          Happy Birthday Leisha{turning}!! 🥳💕 Hope your day is as wonderful as you are.
+          Happy Birthday Sherya{turning}!! 🥳💕 Hope your day is as wonderful as you are.
         </p>
       ) : (
         <>
